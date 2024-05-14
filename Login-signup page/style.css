@@ -226,13 +226,13 @@ body{
   .form-content .signup-form{
     width: 100%;
   }
-  .form-content .signup-form{
+  /* .form-content .signup-form{
     display: none;
-  }
-  .container #flip:checked ~ .forms .signup-form{
+  } */
+  /* .container #flip:checked ~ .forms .signup-form{
     display: block;
   }
   .container #flip:checked ~ .forms .login-form{
     display: none;
-  }
+  } */
 }
