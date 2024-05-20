@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Shigr</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Template Stylesheet -->
+    <link href="../css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/css/intlTelInput.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/intlTelInput.min.js"></script>
+    <style>
+        .iti { width: 100%; }
+        .iti__selected-flag {
+            padding-right: 10px; /* Add space between the country code and the phone number */
+        }
+        .iti__flag-container {
+            margin-right: 10px;
+        }
+
+        .numberField{
+            border: 1px solid red; 
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="add-address-main">
+
+   
+    <section class="container-address">
+        <!-- <div class="breadcrumb">
+            <a href="#">Your Account</a> › <span>Your Addresses</span>
+        </div> -->
+        <h1 style="font-weight: 600; color: rgb(36, 19, 110); display: flex; text-align: center; justify-content: center;">Add Address</h1>
+        <form action="#" class="form">
+            <div class="column">
+                <div class="input-box">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="Enter full name" required />
+                </div>
+                <div id="numberField" class="input-box">
+                    <label>Enter Mobile Number</label>
+                    <input onmouseleave="return numberfn()" type="number" id="phone" required />
+                </div>
+            </div>
+            <div class="input-box">
+                <label>Address</label>
+                <input type="text" placeholder="Enter street address line 1" required />
+                <input type="text" placeholder="Enter street address line 2" required />
+                <div class="column">
+                    <div class="select-box ">
+                        <select class="country" aria-label="Default select example" onchange="loadStates()">
+                            <option selected hidden>Select Country</option>
+                        </select>
+                    </div>
+                    <div class="select-box">
+                        <select class="state" aria-label="Default select example" onchange="loadCities()">
+                            <option selected hidden>Select State</option>
+                        </select>
+                    </div>
+                   
+                </div>
+                <div class="select-box">
+                 
+                    <select class="city" aria-label="Default select example">
+                        <option selected hidden>Select City</option>
+                    </select>
+                    
+                </div>
+                <input type="text" placeholder="Enter Postal Code" required />
+            </div>
+            <button>Submit</button>
+        </form>
+    </section>
+</div>
+    <script src="../js/addAddress.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var input = document.querySelector("#phone");
+            window.intlTelInput(input, {
+                initialCountry: "auto",
+                geoIpLookup: function(callback) {
+                    fetch('https://ipinfo.io?token=YOUR_TOKEN', { headers: { 'Accept': 'application/json' } })
+                        .then(function(response) { return response.json(); })
+                        .then(function(data) { callback(data.country); })
+                        .catch(function() { callback('US'); });
+                },
+                separateDialCode: true,  // Show country code separately
+                utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/utils.js"
+            });
+        });
+
+        function numberfn (){
+            let a = document.getElementById("phone").value;
+            if (a==""){
+                document.getElementById("phone").innerHTML= "Please Enter Valid Number";
+                return false;
+            }
+            if(a.length<10){
+               
+                return false;
+    
+            }
+            if((a.charAt(0) != 9) && (a.charAt(0) != 8) && (a.charAt(0) != 7) && (a.charAt(0) != 6)){ 
+             
+                return false;
+    
+            }
+        }
+    
+    
+     </script>
+</body>
+
+</html>
