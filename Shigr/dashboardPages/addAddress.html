@@ -13,9 +13,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/css/intlTelInput.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/intlTelInput.min.js"></script>
     <style>
-        .iti { width: 100%; }
+        .iti { 
+            width: 100%;
+            margin-top: 8px;
+         }
         .iti__selected-flag {
-            padding-right: 10px; /* Add space between the country code and the phone number */
+            padding-right: 10px; 
         }
         .iti__flag-container {
             margin-right: 10px;
@@ -33,9 +36,9 @@
 
    
     <section class="container-address">
-        <!-- <div class="breadcrumb">
-            <a href="#">Your Account</a> › <span>Your Addresses</span>
-        </div> -->
+        <div class="breadcrumb">
+            <a href="../Dashboard/userDashboard.html">Your Account</a> › <span style="margin-left: 5px; font-size: 17px; font-weight: 600;">Add Addresses</span>
+        </div>
         <h1 style="font-weight: 600; color: rgb(36, 19, 110); display: flex; text-align: center; justify-content: center;">Add Address</h1>
         <form action="#" class="form">
             <div class="column">
@@ -74,7 +77,10 @@
                 </div>
                 <input type="text" placeholder="Enter Postal Code" required />
             </div>
-            <button>Submit</button>
+            <div class="column">
+                <button>Cancel</button>
+                <button>Submit</button>
+            </div>
         </form>
     </section>
 </div>

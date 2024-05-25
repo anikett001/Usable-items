@@ -167,6 +167,8 @@
         opacity: 1;
     }
 }
+
+
 /* Add-Address Page */
 .add-address-main{
     min-height: 100vh;
@@ -265,12 +267,15 @@ padding: 0 15px;
 }
 
 .breadcrumb a {
-    color: #0073bb;
+    color: #e91414;
     text-decoration: none;
+    font-size: 17px;
+    font-weight: 600;
+    margin-right: 5px;
 }
 
 .breadcrumb a:hover {
-    text-decoration: underline;
+    color: #b61616;
 }
 
 h1 {
@@ -291,6 +296,7 @@ h1 {
     padding: 20px;
     width: 30%;
     box-sizing: border-box;
+    margin: 15px;
 }
 
 .add-address {
@@ -357,15 +363,26 @@ h1 {
 }
 
 .address-actions a {
-    color: #0073bb;
+    color: #e91414;
     text-decoration: none;
 }
 
 .address-actions a:hover {
     text-decoration: underline;
 }
+@media screen and (max-width: 784px) { 
+    .address {
+        width: 300px;
+        height: 250px;
+    }
+}
 
-
+@media screen and (max-width: 500px){
+    .form .column{
+        flex-wrap: wrap ;
+    }
+    
+}
 
 
 /* Orders Page */
@@ -400,8 +417,8 @@ h1 {
 }
 
 .tab.active {
-    border-bottom: 2px solid #ff9900;
-    color: #ff9900;
+    border-bottom: 2px solid #e91414;
+    color: #e91414;
 }
 
 .order-summary {
@@ -522,7 +539,19 @@ h1 {
 
 
 
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 calc(50% - 40px);
+        max-width: calc(50% - 40px);
+    }
+}
 
+@media (max-width: 480px) {
+    .card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
 
 
 
@@ -658,7 +687,7 @@ h1 {
 .service-item,
 .price-item,
 .team-item {
-    box-shadow: 0 0 45px rgba(0, 0, 0, .07);
+   
 }
 
 .service-item img,

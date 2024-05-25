@@ -1,0 +1,86 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #8683b0;
+    font-family: Arial, sans-serif;
+    margin: 1px;
+    position: relative;
+}
+
+.profile-card, .edit-form {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    height: 400px;
+    text-align: center;
+    padding: 15px;
+    /* position: absolute; */
+}
+
+.profile-info h2 {
+    margin: 2px 10px 10px;
+    font-size: 30px;
+    color: #e91414;
+
+}
+
+.profile-info p {
+    margin: 10px 10;
+    color: #1b1010;
+}
+
+.profile-info button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #e91414;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.profile-info button:hover {
+    background-color: #b61616;
+}
+
+.edit-form {
+    display: none;
+    flex-direction: column;
+}
+
+.edit-form h2 {
+    margin-bottom: 5px;
+}
+
+.edit-form label {
+    display: block;
+    margin-top: 7px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.edit-form input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.edit-form button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #e91414;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.edit-form button:hover {
+    background-color: #b61616;
+}
+
