@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Indian Address</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="body-shigr-address">
+    <div class="container-shigr-address">
+        <nav class="breadcrumb">
+            <a href="#" style="font-size:17px ;">Your Account</a> > <span>Your Indian Address</span>
+        </nav>
+        <h1>Your Indian Address</h1>
+        <p class="description-shigr-address">
+            This is your India Address, provided by Shigr. You can use this address to shop in India and get delivered to us, so that we can safely get these delivered to your doorsteps.
+        </p>
+        <div class="address-card-shigr-address">
+            <h2>Your Address</h2>
+            <p th:text="${identifier} + ' - ' + ${name}">5F5E101 - Aniket Tyagi</p>
+            <p th:text="${address1}">520, Sector 2C, Vasundhara,</p>
+            <p th:text="${address2}">Ghaziabad, Uttar Pradesh 201012</p>
+            <p th:text="${phone}">Ph: +91 9560274479</p>
+        </div>
+    </div>
+</body>
+</html>
+</body>
+</html>

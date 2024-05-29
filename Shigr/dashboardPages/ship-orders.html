@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Shipment Order</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f7f7f7;
+        }
+        .container {
+            max-width: 600px;
+            margin-top: 50px;
+            padding: 30px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        .breadcrumb a {
+            color: #e63946;
+        }
+        .breadcrumb-item.active {
+            color: #555;
+        }
+        .btn-red {
+            background-color: #e63946;
+            color: white;
+            border: none;
+        }
+        .btn-red:hover {
+            background-color: #d62828;
+        }
+        .form-control:focus {
+            border-color: #e63946;
+            box-shadow: 0 0 0 0.2rem rgba(230, 57, 70, 0.25);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Your Account</a></li>
+                <li class="breadcrumb-item"><a href="#">Your Shipment Orders</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Add Shipment Order</li>
+            </ol>
+        </nav>
+        <h1 class="mb-4">Add Shipment Order</h1>
+        <form>
+            <div class="form-group">
+                <label for="addressId">Shipping Address</label>
+                <input type="text" class="form-control" id="addressId" placeholder="Address Id">
+            </div>
+            <button type="submit" class="btn btn-red">Add Order</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

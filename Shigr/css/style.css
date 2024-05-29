@@ -273,6 +273,11 @@ padding: 0 15px;
     font-weight: 600;
     margin-right: 5px;
 }
+.breadcrumb span {
+    margin-left: 5px; 
+    font-size: 16px; 
+    font-weight: 600;
+}
 
 .breadcrumb a:hover {
     color: #b61616;
@@ -383,6 +388,78 @@ h1 {
     }
     
 }
+
+/* Shigr-address page */
+
+
+.body-shigr-address {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background-color: #f7f7f7;
+margin: 0;
+padding: 20px;
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+}
+
+.container-shigr-address {
+max-width: 600px;
+background: white;
+padding: 30px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+border-radius: 10px;
+border-top: 5px solid #e63946;
+text-align: center;
+}
+
+nav {
+font-size: 14px;
+margin-bottom: 20px;
+}
+
+nav a {
+color: #e63946;
+text-decoration: none;
+}
+
+nav span {
+color: #333;
+}
+
+h1 {
+font-size: 28px;
+color: #333;
+margin-bottom: 15px;
+}
+
+.description-shigr-address {
+font-size: 16px;
+color: #666;
+margin-bottom: 25px;
+line-height: 1.5;
+}
+
+.address-card-shigr-address {
+background: #f9f9f9;
+padding: 20px;
+border-radius: 8px;
+border: 1px solid #ddd;
+}
+
+.address-shigr-address h2 {
+font-size: 22px;
+color: #333;
+margin-bottom: 15px;
+color: #e63946;
+}
+
+.address-shigr-address p {
+font-size: 16px;
+color: #555;
+margin: 5px 0;
+}
+
 
 
 /* Orders Page */
